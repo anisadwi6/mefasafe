@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+/* Tambahkan gaya kustom di bawah ini jika diperlukan */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.4s ease-out;
+}
+
+/* Aksesibilitas */
+html.a11y-high-contrast {
+  filter: contrast(1.15);
+}
+
+html.a11y-high-contrast body {
+  background: #fff !important;
+  color: #0f172a !important;
+}
+
+html.a11y-high-contrast button,
+html.a11y-high-contrast a {
+  text-decoration-thickness: 2px;
+}
+
+html.a11y-reduce-motion *,
+html.a11y-reduce-motion *::before,
+html.a11y-reduce-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+
+/* Chat notification toast progress bar */
+@keyframes shrinkBar {
+  from { width: 100%; }
+  to   { width: 0%; }
+}
+
+.animate-shrink-bar {
+  animation: shrinkBar 5s linear forwards;
+}
